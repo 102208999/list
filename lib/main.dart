@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'listview.dart';
+import 'package:flutter_application_2/listviewassignment.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(body: CustomGridView()),
+      home: Scaffold(body: CustomGridView2()),
     );
   }
 }
