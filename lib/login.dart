@@ -10,7 +10,7 @@ class LogIn extends StatelessWidget {
     return Container(
       height: double.maxFinite,
       width: double.maxFinite,
-      color: Colors.white,
+      color: Color(0xffffffff),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: SingleChildScrollView(
@@ -21,7 +21,7 @@ class LogIn extends StatelessWidget {
                 width: 100,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
+                  color: Color(0xff3fbfff),
                 ),
                 child: IconButton(
                   icon: Icon(
@@ -38,16 +38,19 @@ class LogIn extends StatelessWidget {
                 children: [
                   Text(
                     "Welcome to Econ",
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 20, color: Color(0xff37425b)),
                   ),
                   SizedBox(
-                    height: 5,
+                    height: 8,
                   ),
-                  Text("Sign In To Continue"),
+                  Text(
+                    "Sign In To Continue",
+                    style: TextStyle(color: Color(0xffe1e1e6)),
+                  ),
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
+                padding: const EdgeInsets.symmetric(vertical: 15),
                 child: TextField(
                   decoration: InputDecoration(
                       isDense: true,
@@ -55,7 +58,8 @@ class LogIn extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       hintText: 'Email',
-                      prefixIcon: Icon(Icons.email_sharp)),
+                      prefixIcon: Icon(Icons.email_sharp),
+                      hintStyle: TextStyle(color: Color(0xffe3e6ec))),
                 ),
               ),
               TextField(
@@ -65,19 +69,47 @@ class LogIn extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     hintText: 'password',
-                    prefixIcon: Icon(Icons.password)),
+                    prefixIcon: Icon(Icons.password),
+                    hintStyle: TextStyle(color: Color(0xffe3e6ec))),
               ),
-              SizedBox(height: 9),
+              SizedBox(height: 15),
               Container(
                 width: 480,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  color: Colors.blue,
+                  color: Color(0xff3fbfff),
                 ),
                 child: TextButton(
-                  child: Text("Sign in"),
+                  child: Text(
+                    "Sign in",
+                    style: TextStyle(color: Color(0xffcdfeff)),
+                  ),
                   onPressed: () {},
                 ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(height: 3, width: 220, color: Color(0xff979ba7)),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Text(
+                      "or",
+                      style: TextStyle(color: Color(0xff9498a4)),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Container(
+                      height: 3,
+                      width: 220,
+                      color: Color(0xff81d2e7),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 15,
@@ -85,7 +117,7 @@ class LogIn extends StatelessWidget {
               Container(
                 height: 40,
                 width: 480,
-                color: Colors.black38,
+                color: Color(0xfffafafc),
                 child:
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Container(
@@ -107,19 +139,39 @@ class LogIn extends StatelessWidget {
               Container(
                 height: 40,
                 width: 480,
-                color: Colors.black38,
+                color: Color(0xfffafafc),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
                       width: 40,
+                      height: 35,
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage("Facebook_Logo_png.webp"),
+                              image: AssetImage("facebook-logo.png"),
                               fit: BoxFit.cover)),
+                    ),
+                    TextButton(
+                      child: Text("Login with Facebook"),
+                      onPressed: () {},
                     ),
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 10,
+                ),
+                child: Text("Foget Password?",
+                    style: TextStyle(color: Color(0xffd1faff))),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: TextButton(
+                  child: Text("Dont have an account? Register"),
+                  onPressed: () {},
+                ),
+              )
             ],
           ),
         ),
