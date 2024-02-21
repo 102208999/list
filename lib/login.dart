@@ -94,7 +94,14 @@ class LogIn extends StatelessWidget {
                         Container(width: 210, height: 3, color: Colors.black45),
                   ),
                 ],
-              )
+              ),
+              TextField(
+                  decoration: InputDecoration(
+                      isDense: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      hintText: 'Login with Google')),
             ],
           ),
         ),
