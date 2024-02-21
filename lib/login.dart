@@ -80,7 +80,45 @@ class LogIn extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 15,
+              ),
+              Container(
+                height: 40,
+                width: 480,
+                color: Colors.black38,
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Container(
+                    width: 40,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("google-logo-png.png"),
+                            fit: BoxFit.cover)),
+                  ),
+                  TextButton(
+                    child: Text("Login with google"),
+                    onPressed: () {},
+                  ),
+                ]),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Container(
+                height: 40,
+                width: 480,
+                color: Colors.black38,
+                child: Row(
+                  children: [
+                    Container(
+                      width: 40,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("Facebook_Logo_png.webp"),
+                              fit: BoxFit.cover)),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
