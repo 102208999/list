@@ -95,13 +95,28 @@ class LogIn extends StatelessWidget {
                   ),
                 ],
               ),
-              TextField(
-                  decoration: InputDecoration(
-                      isDense: true,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      hintText: 'Login with Google')),
+              Container(
+                height: 50,
+                width: 480,
+                color: Colors.black45,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            image: DecorationImage(
+                                image: AssetImage("google-logo-png.png"),
+                                fit: BoxFit.cover)),
+                        child: Expanded(
+                          child: TextButton(
+                            child: Text("Login With google"),
+                            onPressed: () {},
+                          ),
+                        )),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
