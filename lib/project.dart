@@ -46,10 +46,37 @@ class MyWidget extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 30),
                 child: Draw(label: "EmailAddress"),
               ),
-              Container(
-                height: 40,
-                width: 500,
-                color: Colors.black38,
+              SizedBox(
+                height: 80,
+                width: 250,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                  child: FloatingActionButton(
+                    backgroundColor: const Color.fromRGBO(76, 175, 80, 1),
+                    child: Text(
+                      "Register",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              SizedBox(
+                height: 50,
+                width: 350,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Already a memeber?"),
+                    TextButton(
+                      child: Text("Login Here"),
+                      onPressed: () {},
+                    )
+                  ],
+                ),
               ),
             ]),
           ),
@@ -75,6 +102,7 @@ class _DrawState extends State<Draw> {
       height: 50,
       width: 300,
       child: TextField(
+        textAlign: TextAlign.center,
         decoration: InputDecoration(
             filled: true,
             isDense: true,
