@@ -1,24 +1,49 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_application_2/to_do_list.dart';
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_print
 
-import 'to _do_list2.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_application_2/login._input.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: const Text("To do list")),
+          toolbarHeight: 40,
         ),
-        body: ToDoList2(
-          title: "to do",
+        body: MyInput(),
+        bottomNavigationBar: BottomAppBar(
+          height: 50,
+          color: Colors.white,
+          child:
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+            IconButton(
+                onPressed: () {
+                  print("hello nepal");
+                },
+                icon: Icon(Icons.home)),
+            IconButton(
+                onPressed: () {
+                  print("hello nepal");
+                },
+                icon: Icon(Icons.notifications)),
+            IconButton(
+                onPressed: () {
+                  print("hello nepal");
+                },
+                icon: Icon(Icons.search)),
+            IconButton(
+                onPressed: () {
+                  print("hello nepal");
+                },
+                icon: Icon(Icons.person_search))
+          ]),
         ),
       ),
     );
